@@ -1,9 +1,9 @@
 import pandas as pd
 from osallistuja import Osallistuja
 
-def osallistujat_to_list(filename):
+def osallistujat_to_list(filename, sheetname):
     """takes the excel input file name and returns a list of Osallistuja objects"""
-    osallistujat_df = pd.read_excel(filename)
+    osallistujat_df = pd.read_excel(filename, sheet_name=sheetname)
     osallistujat_list = []
     # print(osallistujat_df)
     # iterate through df and create a new Osallistuja object from each row
@@ -13,6 +13,6 @@ def osallistujat_to_list(filename):
 
     return osallistujat_list
 
-# print(osallistujat_to_list("osallistujat_input.xlsx")[0].get_name())
+# print(osallistujat_to_list("C:/Users/risto/OneDrive/Asiakirjat/Johtajatulet_vekotin/osallistujat_input.xlsx")[0].get_name())
 
     
