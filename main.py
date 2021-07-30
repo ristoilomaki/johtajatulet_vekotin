@@ -31,7 +31,7 @@ pajat = import_pajat.pajat_to_list(file_pajat, sheet_pajat)
 byList = []
 byTheme = []
 for guy in osallistujat:
-    if len(Osallistuja.get_wishlist(guy)) == 10:
+    if len(Osallistuja.get_wishlist(guy)) == 10: # tämä pitää muuttaa, kaikenmittaiset listat ok
         byList.append(guy)
     else:
         byTheme.append(guy)
