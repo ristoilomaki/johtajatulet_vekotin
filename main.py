@@ -36,6 +36,8 @@ for guy in osallistujat:
     else:
         byTheme.append(guy)
 
+# vaeltajat käsitellään ensin
+
 """ print(byList[0].get_wishlist())
 for paja in pajat:
     print(paja.get_participants_list()) """
@@ -93,7 +95,7 @@ for guy in byList:
     if Osallistuja.ip_isgoing(guy):
         find_and_add(guy, "IP", pajat)
     if Osallistuja.sunnuntai_isgoing(guy):
-        find_and_add(guy, "sunnuntai", pajat)
+        find_and_add(guy, "sunnuntai", pajat) # sunnuntaina mennään verstaisiin
 
 # käydään läpi teeman perusteella sijoitettavat osallistujat
 
@@ -103,7 +105,7 @@ for guy in byTheme:
     if Osallistuja.ip_isgoing(guy):
         find_and_add_by_theme(guy, "IP", pajat)
     if Osallistuja.sunnuntai_isgoing(guy):
-        find_and_add_by_theme(guy, "sunnuntai", pajat)
+        find_and_add_by_theme(guy, "sunnuntai", pajat) # verstaissa ei taida olla teemaa?
 
 # 5. osallistujat ja tulokset dataframeen ja ulos excelii
 
