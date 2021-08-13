@@ -29,8 +29,10 @@ class Osallistuja:
         # wishlistiin siis kymmenenen pajaa, joihin mieluusti osallistuisi
         # entä jos ei ole kymmentä pajaa valittuna? nyt listaan päätyy niin monta kuin on tarjolla
         # self.__wishlist = wishlist
-
-        self.__wishtheme = wishtheme 
+        if pd.isnull(wishtheme): # voi olla monta teemaa -> lista
+            self.__wishtheme = []
+        else:
+            self.__wishtheme = wishtheme.split(", ")
         self.__verstas = verstas # no idea actually what this is (16.7.)
         self.__ap_paja = None
         self.__ip_paja = None

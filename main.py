@@ -70,7 +70,7 @@ def find_and_add_by_theme(guy, aika, pajat):
     least = None # paja with least participants
     least_index = None
     for i in range(len(pajat)):
-        if Paja.get_time(pajat[i]) == aika and Paja.get_theme(pajat[i]) == Osallistuja.get_wishtheme(guy) and Paja.get_name(pajat[i]) not in Osallistuja.get_all_pajat(guy):
+        if Paja.get_time(pajat[i]) == aika and Paja.get_theme(pajat[i]) in Osallistuja.get_wishtheme(guy) and Paja.get_name(pajat[i]) not in Osallistuja.get_all_pajat(guy):
             # katsotaan vain halutun ajankohdan aikoja
             # ja sellaisia pajoja, joihin osallistuja haluaa
             if (least == None and Paja.is_room(pajat[i])) or (Paja.is_room(pajat[i]) and Paja.get_participants_n(pajat[i]) < Paja.get_participants_n(least)):
