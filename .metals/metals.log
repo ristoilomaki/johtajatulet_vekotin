@@ -1,0 +1,25 @@
+[0m2021.07.17 12:33:13 INFO  Started: Metals version 0.10.5 in workspace 'C:\Users\risto\OneDrive\Asiakirjat\Johtajatulet_vekotin\johtajatulet_vekotin' for client Visual Studio Code 1.58.2.[0m
+[0m2021.07.17 12:33:16 INFO  time: initialize in 2.9s[0m
+[0m2021.07.17 12:33:16 WARN  Build server is not auto-connectable.[0m
+[0m2021.07.17 12:33:16 WARN  no build tool detected in workspace 'C:\Users\risto\OneDrive\Asiakirjat\Johtajatulet_vekotin\johtajatulet_vekotin'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+heinäk. 17, 2021 6:39:42 IP. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.07.17 20:30:28 INFO  shutting down Metals[0m
+[0m2021.07.18 12:42:46 INFO  Started: Metals version 0.10.5 in workspace 'C:\Users\risto\OneDrive\Asiakirjat\Johtajatulet_vekotin\johtajatulet_vekotin' for client Visual Studio Code 1.58.2.[0m
+[0m2021.07.18 12:42:49 INFO  time: initialize in 2.73s[0m
+[0m2021.07.18 12:42:49 WARN  Build server is not auto-connectable.[0m
+[0m2021.07.18 12:42:49 WARN  no build tool detected in workspace 'C:\Users\risto\OneDrive\Asiakirjat\Johtajatulet_vekotin\johtajatulet_vekotin'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.07.18 12:59:12 INFO  shutting down Metals[0m
+[0m2021.07.30 15:07:50 INFO  Started: Metals version 0.10.5 in workspace 'C:\Users\risto\OneDrive\Asiakirjat\Johtajatulet_vekotin\johtajatulet_vekotin' for client Visual Studio Code 1.58.2.[0m
+[0m2021.07.30 15:07:54 INFO  time: initialize in 4.02s[0m
+[0m2021.07.30 15:07:55 WARN  Build server is not auto-connectable.[0m
+[0m2021.07.30 15:07:55 WARN  no build tool detected in workspace 'C:\Users\risto\OneDrive\Asiakirjat\Johtajatulet_vekotin\johtajatulet_vekotin'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+heinäk. 30, 2021 3:36:34 IP. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.08.13 17:52:36 INFO  Started: Metals version 0.10.5 in workspace 'C:\Users\risto\OneDrive\Asiakirjat\Johtajatulet_vekotin\johtajatulet_vekotin' for client Visual Studio Code 1.58.2.[0m
+[0m2021.08.13 17:52:40 INFO  time: initialize in 4.3s[0m
+[0m2021.08.13 17:52:45 WARN  Build server is not auto-connectable.[0m
+[0m2021.08.13 17:52:45 WARN  no build tool detected in workspace 'C:\Users\risto\OneDrive\Asiakirjat\Johtajatulet_vekotin\johtajatulet_vekotin'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+elok. 13, 2021 6:25:08 IP. org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+[0m2021.08.13 18:33:36 INFO  shutting down Metals[0m

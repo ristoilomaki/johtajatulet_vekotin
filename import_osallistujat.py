@@ -9,7 +9,7 @@ def osallistujat_to_list(filename, sheetname):
     # iterate through df and create a new Osallistuja object from each row
 
     for _, row in osallistujat_df.iterrows():
-        osallistujat_list.append(Osallistuja(row['Osallistuja'], row['AP'], row['IP'], row['Sunnuntai'], row['Toivelista'], row['Toiveteema'], row['Vertaisverstas']))
+        osallistujat_list.append(Osallistuja(row['Nimi'], row['AP'], row['IP'], row['Sunnuntai'], row['Toivelista'], row['Teema'], row['Verstaslista'], row['Ikäkausi'], row['Sähköposti']))
 
     return osallistujat_list
 

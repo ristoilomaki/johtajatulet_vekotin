@@ -1,6 +1,6 @@
 class Paja:
     def __init__(self, name, theme, time, max_participants) -> None:
-        self.__name = name
+        self.__name = name.split(".")[0]
         self.__theme = theme
         self.__aika = time
         self.__max_participants = max_participants
