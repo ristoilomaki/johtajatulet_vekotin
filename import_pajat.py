@@ -1,5 +1,6 @@
 import pandas as pd
 from paja import Paja
+from pprint import pprint
 
 def pajat_to_list(filename, sheetname):
     """Takes a filename as input and returns a list of Paja objects"""
@@ -14,7 +15,9 @@ def pajat_to_list(filename, sheetname):
 
     return paja_list
 
-l = pajat_to_list("C:/Users/risto/OneDrive/Asiakirjat/Johtajatulet_vekotin/työpajat_input_testi.xlsx", "input")
-""" for e in l:
-    print(e.get_max_participants()) """
-# print(l[0].is_room())
+file_pajat = "C:/Users/risto/OneDrive/Asiakirjat/Johtajatulet_vekotin/työpajat_legit.xlsx"
+sheet_pajat = "data"
+
+l = pajat_to_list(file_pajat, sheet_pajat)
+i = 8
+pprint(vars(l[i]))

@@ -1,5 +1,6 @@
 import pandas as pd
 from osallistuja import Osallistuja
+from pprint import pprint
 
 def osallistujat_to_list(filename, sheetname):
     """takes the excel input file name and returns a list of Osallistuja objects"""
@@ -13,6 +14,9 @@ def osallistujat_to_list(filename, sheetname):
 
     return osallistujat_list
 
-# print(osallistujat_to_list("C:/Users/risto/OneDrive/Asiakirjat/Johtajatulet_vekotin/osallistujat_input.xlsx")[0].get_name())
-
+""" file_osallistujat = "C:/Users/risto/OneDrive/Asiakirjat/Johtajatulet_vekotin/osallistujat_legit.xlsx"
+sheet_osallistujat = "data"
+l = osallistujat_to_list(file_osallistujat, sheet_osallistujat)
+i = 1
+pprint(vars(l[i])) """
     

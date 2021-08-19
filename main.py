@@ -18,6 +18,7 @@ sheet_verstaat="data"
 # 1. tuodaan excel pd dataframeksi
 osallistujat = import_osallistujat.osallistujat_to_list(file_osallistujat, sheet_osallistujat)
 # print(osallistujat[1].get_wishlist())
+# print(108 in osallistujat[1].get_wishlist())
 
 # 2. luodaan jokaisesta osallistujasta olio
 # oliolla kentät nimi, toivelista, tieto kuhunkin työpajaan osallistumisesta, ajankohta hyvälle työlle
@@ -50,7 +51,7 @@ for guy in osallistujat:
 vaeltajat = []
 muut = []
 for guy in osallistujat:
-    if guy.get_ikakausi == "Vaeltajat":
+    if guy.get_ikakausi() == "Vaeltajat (18–22-v)":
         vaeltajat.append(guy)
     else:
         muut.append(guy)
@@ -111,7 +112,7 @@ def add_to_verstas(guy, verstaat):
                 least_index = i
     # nyt muuttujassa least on paja, johon osallistuja haluaa ja hänet voidaan lisätä
     if least_index is not None:
-        Verstas.add_participant(pajat[least_index], guy)
+        Verstas.add_participant(verstaat[least_index], guy)
         # Osallistuja.remove_added(guy, Paja.get_name(pajat[least_index]))
         Osallistuja.assign_name(guy, Verstas.get_name(verstaat[least_index]), "sunnuntai")
         # ei tarvitse poistaa vaihtoehtoja, koska voi mennä vain yhteen verstaat
@@ -136,9 +137,9 @@ for guy in vaeltajat:
 
 for guy in muut:
     if Osallistuja.ap_isgoing(guy):
-        find_and_add_by_theme(guy, "AP", pajat)
+        find_and_add(guy, "Aamupäivä", pajat)
     if Osallistuja.ip_isgoing(guy):
-        find_and_add_by_theme(guy, "IP", pajat)
+        find_and_add(guy, "Iltapäivä", pajat)
     if Osallistuja.sunnuntai_isgoing(guy):
         add_to_verstas(guy, verstaat) # verstaissa ei taida olla teemaa?
 
@@ -156,16 +157,16 @@ verstaat_results = pd.DataFrame()
 for paja in verstaat:
     column_name = Verstas.get_name(paja)
     help_df = pd.DataFrame(Verstas.get_participants_list(paja), columns = [column_name])
-    verstaat_results = pd.concat([paja_results, help_df], axis=1)
+    verstaat_results = pd.concat([verstaat_results, help_df], axis=1)
 
 verstaat_results.to_excel("versaat_results_legit.xlsx", sheet_name="Versaat")
 
 # yhdistetään osallistujat ja ulostetaan ne exceliin
 all_participants = vaeltajat + muut
 
-osallistuja_results = pd.DataFrame(columns= ['Nimi', 'AP', 'IP', 'sunnuntai'])
+osallistuja_results = pd.DataFrame(columns= ['Nimi', 'Sähköposti', 'Aamupäivä', 'Iltapäivä', 'Vertaisverstas'])
 for guy in all_participants:
-    new_row = {'Nimi': guy.get_name(), 'AP': guy.get_pajaname('AP'), 'IP': guy.get_pajaname('IP'), 'sunnuntai': guy.get_pajaname('sunnuntai')}
+    new_row = {'Nimi': guy.get_name(), 'Sähköposti': guy.get_mail(), 'Aamupäivä': guy.get_pajaname('Aamupäivä'), 'Iltapäivä': guy.get_pajaname('Iltapäivä'), 'Vertaisverstas': guy.get_pajaname('sunnuntai')}
     osallistuja_results = osallistuja_results.append(new_row, ignore_index=True)
 
 osallistuja_results.to_excel("osallistujat_results_legit.xlsx", sheet_name="Osallistujat")

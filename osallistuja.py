@@ -40,7 +40,7 @@ class Osallistuja:
         
         self.__verstas = []
         if pd.notna(verstas):
-            self.__verstas = verstas.split(";")
+            helplist = verstas.split(";")
             for e in helplist:
                 s = e.split(".")
                 self.__verstas.append(s[0].strip())
